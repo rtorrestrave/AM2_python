@@ -46,6 +46,9 @@ for h in [1/2, 1/4, 1/8]:
     error = abs(y_exacte(3)-y[N])
     print(f' h = {h}, y_aprox(2) = {y[N]} error = {error}')
 
+for h in [1/2, 1/4, 1/8]:
+    t, y = RK2_heun(f, t0, tf, y0, h)
+    plt.plot(t, y, '--')
 
-
-
+plt.plot(t,y_exacte(t), 'k-')
+plt.show()
