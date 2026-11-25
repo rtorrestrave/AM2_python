@@ -19,7 +19,6 @@ def RK2_heun (f, t0, tf, y0, h ):
     t = np.zeros(N+1)
     y = np.zeros(N+1)
 
-
     t[0] = t0
     y[0] = y0
 
@@ -30,6 +29,7 @@ def RK2_heun (f, t0, tf, y0, h ):
         t[i+1] = t[i]+h
 
     return t, y
+
 def f(t,y):
     return t+y
 def y_exacte(t):

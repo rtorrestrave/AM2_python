@@ -3,7 +3,7 @@ P6.1 Sigui el problema de valor inicial
 y′ = t^2 / (y − 1)  1 ≤ t ≤ 2
 y(1) = 3
 (a) Apliqueu el mètode d’Euler amb passos h = 1/4 h = 1/8 i h = 1/16
-per aproximar el valorde y(2).
+per aproximar el valor de y(2).
 (b) Compareu els resultats amb la solució exacta, sabent que la solució
 analítica és y(t) = 1 + root(2/3*(t^3 + 5).
 (c) Feu una gràfica amb les tres aproximacions i la solució exacta.
@@ -17,7 +17,7 @@ def euler(f, t0, tf, y0, h):
     t = np.zeros(N+1)
     y = np.zeros(N+1)
 
-    t[0] = t0 #CONDICIÓ INICIAL
+    t[0] = t0 #CONDICIÓ
     y[0] = y0 #CONDICIÓ INICIAL
 
     for i in range(0,N):
@@ -25,6 +25,7 @@ def euler(f, t0, tf, y0, h):
         t[i+1] = t[i] + h
 
     return t, y
+
 def f(t,y):
         return t**2/(y-1)
 def y_exacte(t):
